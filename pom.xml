@@ -103,3 +103,24 @@
                             <ignoreIdentifiers>true</ignoreIdentifiers>
 
                         </configuration>
+
+
+
+
+
+
+
+
+
+				    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-site-plugin</artifactId>
+                        <version>2.1.1</version>
+                        <dependencies>
+                            <dependency>
+                                <groupId>com.edurekademo.tutorial</groupId>
+                                <artifactId>addressbook</artifactId>
+                                <version>${project.version}</version>
+                            </dependency>
+                        </dependencies>
+                    </plugin>
