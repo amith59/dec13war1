@@ -1,0 +1,35 @@
+pipeline{
+    agent any
+    stages{
+        stage("checkout the code"){
+            steps{
+              //git branch: 'main', credentialsId: 'creds_github', url: 'https://github.com/amith59/miniprodec.git'
+              git branch: 'main', credentialsId: 'creds_github', url: 'https://github.com/amith59/dec13war1.git'
+            }
+        }
+        stage("Build test"){
+            steps{
+                sh "mvn test"
+            }
+        }
+        // stage("Build clean"){
+        //     steps{
+        //         sh "mvn clean install"
+        //     }
+        // }
+        stage("Build clean"){
+            steps{
+                sh "mvn package"
+            }
+        }
+//         stage("deployment"){
+//             steps{
+//                 sshagent(['Qdeploy_user']) {
+//                 //sh "scp -o StrictHostKeyChecking=no target/addressbook.war ec2-user@100.27.198.226:/home/ec2-user/tomcat9/webapps"
+//                 //sh "scp -o StrictHostKeyChecking=no target/addressbook.war ec2-user@54.81.108.204:/home/ec2-user/tomcat9/webapps"
+//                  sh "scp -o StrictHostKeyChecking=no target/edutechApp-1.5.jar  ec2-user@54.160.251.49:/home/ec2-user/tomcat9/webapps"
+//                 }
+//             }
+     // }
+    }
+ }
