@@ -149,3 +149,11 @@
                             </execution>
                         </executions>
                     </plugin>
+
+
+
+				    <dependency>
+                                <groupId>com.edurekademo.tutorial</groupId>
+                                <artifactId>addressbook</artifactId>
+                                <version>${project.version}</version>
+                            </dependency>
