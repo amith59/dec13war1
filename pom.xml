@@ -182,3 +182,12 @@
                             </execution>
                         </executions>
                     </plugin>
+
+
+
+					      <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <version>1.9.2</version>
+            <type>jar</type>
+        </dependency>
