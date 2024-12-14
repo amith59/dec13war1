@@ -27,6 +27,8 @@
         <version>3.3.1</version>
         <configuration>
         </configuration>
+      </plugin>
+    </plugins>
     <finalName>my-web-app</finalName>
   </build>
 </project>
